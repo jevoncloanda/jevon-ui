@@ -1,59 +1,81 @@
 ---
 name: jevon-ui
-description: Apply Jevon's frontend design judgment when creating or materially changing user-facing interfaces, including pages/components, UI redesign, visual polish, responsive layouts, product interface review, and design-reference implementation. Favor domain fit, clear hierarchy, useful density, existing product conventions, and intentional styling over generic AI/SaaS aesthetics. Do not use for backend, database, CLI, infrastructure, API-only work, or frontend changes with no visual impact.
+description: >-
+  Apply Jevon's personal UI judgment and project fit to meaningful visual frontend work:
+  pages/components, dashboards, forms, data tables, redesign, responsive layouts,
+  design review, and screenshot/Figma/live-site implementation. Preserve product
+  conventions and interpret references; coordinate with Impeccable when useful.
+  Exclude backend, database, infrastructure, API-only, nonvisual frontend refactors,
+  and tiny implementation changes without visual impact.
 ---
 
 # Jevon UI
 
-Create interfaces that feel like usable products in their own domain. This skill supplies design judgment, not a universal palette, layout, density, radius, or imitation of another product.
+Own personal design judgment, product/domain fit, repository preservation, reference interpretation, and the decision to use Impeccable. Do not become a design textbook or impose one aesthetic across products.
 
-## Establish the direction
+## Design authority
 
-Respect higher-priority system and repository instructions. Within design guidance, use this order: explicit user request, project design specification (such as `docs/DESIGN.md`), provided visual references, existing product conventions, then this skill's defaults. Resolve material conflicts instead of blending incompatible directions.
+Respect system and repository instructions. Within design guidance, resolve conflicts in this order:
 
-Before editing an existing UI, inspect the relevant screen and its components, CSS, tokens, typography, spacing, borders, colors, interaction states, and responsive rules. Reuse its visual language unless redesign is requested. Avoid unrelated changes and new component libraries when existing tools suffice.
+1. Explicit user requirements.
+2. Existing project design specification.
+3. User-provided visual references, within their stated scope.
+4. Existing repository/product conventions.
+5. Project domain and user workflow.
+6. Jevon UI preferences.
+7. Impeccable generic recommendations.
 
-Identify the user's main task, important information, decisions, and exceptions. Let these determine hierarchy, navigation, grouping, and density. For a new interface without established conventions, choose a small coherent set of typography, spacing, radius, borders, shadows, colors, and content-width decisions appropriate to the domain; do not invent a global Jevon brand.
+Project-specific authority wins over either skill, including generic stylistic bans. Honor explicit aesthetics; if they create a material usability or accessibility problem, explain it and resolve that problem without silently substituting your taste. Ask only when a material conflict cannot be resolved from context.
 
-If a generated brief defaults to four KPI cards, purple gradients, rounded containers, pills, and generous whitespace, examine what those choices serve. Replace unsupported decoration with a task-focused workspace. If the user explicitly requires those treatments, respect that direction and make them coherent and usable; explain material tradeoffs without silently overriding the request.
+## Establish context before substantial work
 
-## Use references deliberately
+Inspect current screens, components, tokens, typography, spacing, borders/radii, responsive behavior, and interaction patterns before editing an established interface. Missing design documentation does not make it greenfield. Reuse the visual language unless redesign is explicitly requested; even then preserve product truth, behavior, and constraints outside the requested change.
 
-Inspect all supplied references before implementation. Establish what each governs: navigation, table treatment, typography, hierarchy, density, or interaction. Extract those characteristics and adapt them to the product rather than combining every visual feature. Preserve explicit reference scopes. Avoid unnecessary reproduction of third-party branding or proprietary assets; use supplied or authorized assets appropriately. Compare the rendered result with the intended direction afterward.
+Classify the requested **surface**, not the whole company:
 
-## Choose useful structure
+- **Product:** prioritize task completion, information hierarchy, state clarity, efficient navigation, useful density, and predictable interactions.
+- **Brand/marketing:** allow stronger identity, storytelling, art direction, expression, and visual impact. Portfolios and campaigns should not inherit dashboard restraint.
 
-- **Operations/admin:** Consider compact navigation, a utility bar, contextual actions, filters, tables or queues, details, and visible exceptions. Use practical density without sacrificing readability.
-- **Developer tools:** Favor precise navigation, logs/traces/code/data views, and visible status or errors. Use monospace for semantically useful content, not every label.
-- **Finance:** Prioritize trustworthy data presentation, units, numeric alignment, and clear consequences of actions.
-- **Consumer:** Allow imagery, more whitespace, expressive typography, and simpler navigation when they support the experience.
-- **Marketing:** Allow distinctive composition and expressive type. Build around real value and content rather than a stock hero/features/testimonials formula.
+For substantial work, record a concise internal or user-visible preflight as appropriate:
 
-These are starting points, not mandatory shells. Use meaningful grouping, typography, alignment, and separators before adding cards. Reserve pills, icons, gradients, shadows, charts, and large headings for a clear purpose. Use concise domain-specific copy and real functionality; do not invent metrics, tabs, filters, or widgets for visual fullness.
+```text
+Surface: Product / Brand
+Primary user:
+Primary task:
+Existing design:
+Provided references and scope:
+Required density:
+Main hierarchy:
+Patterns to preserve:
+Patterns to avoid:
+Impeccable use: shape / audit / critique / polish / general guidance / none
+```
 
-## Implement complete interactions
+Infer settled facts from available evidence; ask about material gaps only. Skip preflight for trivial visual fixes. Read [Jevon principles](references/jevon-principles.md) for domain/density decisions and [project context](references/project-context.md) when durable project guidance would help.
 
-Use existing framework patterns, components, tokens, utilities, and accessibility behavior. Keep primary and secondary actions distinguishable. Preserve keyboard usability, visible focus, semantic structure, contrast, and status meaning beyond color.
+## Use Impeccable selectively
 
-Tables need scan-friendly columns, aligned numbers, sensible widths and actions, and clear hover/selection states. Forms need labels, logical grouping, appropriate controls and widths, predictable tab order, and explicit validation. Use dialogs to maintain context for bounded tasks; use a page or suitable panel for spacious workflows. Keep important navigation discoverable. Represent status with text and restrained supporting color or icons.
+Impeccable is an optional, separately installed broad design toolkit. Discover it by skill name/capability through the available skill catalog; never assume a machine path or vendor its documentation.
 
-Implement relevant loading, empty, error, disabled, success, and selection states with useful feedback and recovery. Do not treat a populated happy-path mockup as a finished interface.
+- **Tiny alignment fix or copy change:** use existing repository conventions; no full design workflow.
+- **Substantial new UI:** establish product constraints here, then use Impeccable design reasoning or shaping if it helps resolve open decisions.
+- **Working UI feels unfinished:** preserve structure and identity; use polish for finish, audit for technical quality, or critique for design judgment when warranted.
+- **Screenshot/Figma/live-site work:** establish reference scope here; add Impeccable reasoning only where beneficial.
 
-## Verify the rendered result
+General guidance is not an implicit request to run every Impeccable command. If selecting a workflow, read the installed skill and relevant playbook and follow its applicable requirements, subject to higher-priority instructions and the design authority above. Do not treat its breadth as permission for unrelated redesigns, dependency changes, or mandatory project documents. Jevon UI remains responsible for checking the result against the actual product and repository.
 
-For meaningful visual changes, use available browser tooling to run the application, open the relevant screen, inspect the actual rendering, exercise the changed interaction and relevant states, fix issues, and reinspect. Use available Playwright or screenshot capabilities when appropriate; do not require a particular tool or install dependencies solely for this skill.
+If Impeccable is unavailable, continue using project context, these preferences, existing components, and normal frontend expertise. Report missing capability only when it materially limits the requested outcome.
 
-Check desktop and small-laptop widths; include tablet and mobile where relevant to the product. Examine spacing, alignment, hierarchy, overflow, clipping, text wrapping, tables, forms, dialogs, and responsive behavior. For complex tables, choose deliberate scrolling, reduced columns, or responsive details when these work better than row-to-card conversion. Retain access to critical information and actions.
+## Interpret references
 
-Capture screenshots when they aid comparison or proof. Run repository-required checks, but do not equate lint, typecheck, or build success with visual verification. If browser execution or particular states are unavailable, report exactly what remains unverified. Do not force browser testing for a nonvisual change.
+For screenshots, Figma, live sites, or multiple references, read [reference workflow](references/reference-workflow.md). Inspect supplied references and identify what each governs before implementation. Adapt their relevant characteristics to the current product rather than combining every feature or importing an unrelated identity.
 
-## Supporting material
+## Verify and finish
 
-Read only what the task needs:
+For meaningful visual changes, run the app with available browser tooling, inspect relevant rendered screens and viewport(s), exercise changed interactions and relevant states, and compare with project conventions and scoped references. Fix visible issues and reinspect in a bounded confirmation pass. Use Impeccable/browser capabilities where useful; do not require a particular tool or install dependencies solely for this skill.
 
-- [Design principles](references/design-principles.md): when choosing or explaining hierarchy, density, grouping, and visual treatment.
-- [Anti-patterns](references/anti-patterns.md): when auditing generic generated styling or deciding whether a familiar pattern is justified.
-- [Review checklist](references/review-checklist.md): when reviewing an interface or checking a completed visual change. Apply relevant items only.
-- [Conceptual examples](examples/patterns.md): when comparing alternative approaches without prescribing exact CSS.
+Preserve accessibility and complete relevant loading, empty, error, disabled, success, and selection behavior. For dense tables, keep critical comparison and actions available on smaller screens rather than mechanically converting every row into a card.
 
-Finish with a brief account of material design decisions, verification performed, and remaining limitations. Stop when the requested interface works, fits its context, and has sufficient visual proof.
+Run repository-required checks, but lint/typecheck/build success is not rendered-screen proof. State exactly which screens, states, or viewports remain unverified if execution is unavailable. Use the [review checklist](references/review-checklist.md) for product-fit acceptance, and [eval cases](evals/cases.md) when maintaining this skill.
+
+Finish with material decisions, verification, and limitations. Stop when the requested scope works, fits its context, and has sufficient proof.
