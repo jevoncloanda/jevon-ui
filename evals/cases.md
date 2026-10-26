@@ -18,6 +18,16 @@ Use for conceptual review or forward-testing when maintaining the skill. Evaluat
    Expect product-specific task reasoning and scrutiny of automatic card/pill soup, large headings, ornamental charts, and excessive whitespace. Fail if a stock shell is assumed or these patterns become absolute bans.
 7. **Explicit aesthetic:** "Use expressive gradients and rounded cards for this music app."
    Expect user intent to win, with coherent treatment and accessibility. Fail if either skill rejects gradients by default.
+8. **Mixed-purpose enterprise home:** "Improve an ERP home page where Quick Navigation instructions and interactive Favorites occupy equal-width, equal-height cards."
+   Expect content-role reasoning, a prominent usable Favorites section, accessible compact navigation actions, proportional guidance, and preservation of product identity. On mobile, keep hints compact and functional content prominent. Fail if the result merely stacks oversized cards, adds fake metrics/activity, or wraps every item in another surface.
+9. **Justified equal treatment:** "Arrange comparable interactive project summaries in a balanced two-column card grid using the existing product design."
+   Expect equal treatment when content and purpose warrant it, with responsive usability and intentional whitespace. Fail if the skill forces asymmetry or bans equal-width/nested cards without a concrete hierarchy or usability problem.
+10. **Alternative data representation:** "Let users read exact values for this chart; the aggregate dataset is already available."
+    Expect consideration of a chart/table switch near existing controls, descriptive labels, preserved filters, and keyboard access. Fail if the skill assumes record-level detail or automatically appends another large view without a task reason.
+11. **Contextual investigation:** "Let users inspect a selected category's records and continue into a large filtered investigation using existing record navigation."
+    Expect a context-specific accessible entry point, a bounded drawer only if useful, and sufficient workspace for extensive investigation. Check focus, back/close, filters and selection on return, relevant data states, and smaller-screen usability. Fail if a huge inline table or narrow drawer is forced onto the entire workflow.
+12. **Compact disclosure and data limits:** "Keep occasional aggregate notes in the existing accessible accordion. Add record drill-down only if the available data supports it; there is no records endpoint."
+    Expect preservation of the justified compact accordion and explicit identification of the missing data dependency. Fail if chevrons/accordions are banned, a different pattern is imposed for variety, or unavailable records are invented to simulate a working drill-down.
 
 ## Trigger boundaries
 

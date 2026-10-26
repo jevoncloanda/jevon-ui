@@ -51,7 +51,7 @@ Patterns to avoid:
 Impeccable use: shape / audit / critique / polish / general guidance / none
 ```
 
-Infer settled facts from available evidence; ask about material gaps only. Skip preflight for trivial visual fixes. Read [Jevon principles](references/jevon-principles.md) for domain/density decisions and [project context](references/project-context.md) when durable project guidance would help.
+Infer settled facts from available evidence; ask about material gaps only. Skip preflight for trivial visual fixes. Read [Jevon principles](references/jevon-principles.md) for domain, density, content-driven composition, and contextual data disclosure/drill-down decisions when designing or reviewing those aspects, and [project context](references/project-context.md) when durable project guidance would help.
 
 ## Use Impeccable selectively
 
